@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+header {
+    background-color: #26256A;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 1px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000; /* Header'ın her zaman üstte kalmasını sağlar */
+    font-weight: 1000;
+    font-style: normal;
+    font-family: "Brush Script MT", cursive;
+}
+
+.container {
+    width: 100%;
+    max-width: 2000px; /* Maximum genişlik ayarlanabilir */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 80px; /* Header ile içerik arasında boşluk */
+    padding-bottom: 80px; /* Footer ile içerik arasında boşluk */
+}
+
+main {
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.saatler {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%; /* Maksimum genişlik */
+}
+
+.once, .sonra {
+    background-color: #26256A;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    width: calc(100% - 110px); /* Her iki kutuyu hizalamak ve arada boşluk bırakmak için */
+    text-align: center;
+    margin: 5px; /* Kutular arasında boşluk bırakmak için */
+}
+
+
+.once h2, .sonra h2 {
+    background-color: #26256A;
+    padding: 10px 10px;
+    border-radius: 100% ;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+footer {
+    background-color: #26256A;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}

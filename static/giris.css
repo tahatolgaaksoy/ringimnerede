@@ -1,0 +1,163 @@
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+        display: block;
+        padding: 15px;
+        border-radius: 25px;
+        border: 2px solid #26256A;
+        box-sizing: border-box;
+        background-color: #26256A;
+        color: #26256A;
+        font-weight: bold;
+        margin: 10px auto;
+    }
+}
+
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #26256A;
+}
+
+input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    background-color: #26256A;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    font-weight: 1000;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Brush Script MT", cursive;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #26256A;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+footer a {
+    display: inline-block;
+    background-color: #26256A;
+    text-decoration: none;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #26256A;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 60px 20px 80px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container {
+    width: 100%;
+    margin: 8px 0;
+}
+.epostavesifre{
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    border: 2px solid #26256A;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #26256A;
+    color: #26256A;
+    font-weight: bold;
+}
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    border: 2px solid #9cb0db;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #b3c4ea;
+    color: #26256A;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    background-color: #26256A;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.giris{
+    background-color: #26256A;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1E1C56;
+}
+
+.uni-logo {
+    display: block;
+    margin:10px auto;
+    max-width: 20%;
+    height: 75%;
+    text-align: center;
+}

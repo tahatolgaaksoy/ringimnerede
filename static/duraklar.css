@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #26256A;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000; /* Header'ın her zaman üstte kalmasını sağlar */
+    font-weight: 1000;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Brush Script MT", cursive;
+}
+
+.container {
+    width: 100%;
+    max-width: 2000px; /* Maximum genişlik ayarlanabilir */
+    background-color: #D9E7FF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+main {
+    padding: 20px;
+    position: relative;
+    height: 400px;
+}
+
+.harita {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.rota {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.durak {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.durak-icon {
+    width: 40px;
+    height: 40px;
+    background-color:  #D9E7FF;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.durak-icon img {
+    width: 30px;
+    height: 30px;
+}
+.durak span {
+    font-size: 12px;
+    color: #2c3e50;
+}
+
+footer {
+    background-color: #26256A;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+

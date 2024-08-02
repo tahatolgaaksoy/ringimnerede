@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol!</title>
+    <link rel="stylesheet" href="/static/kayit.css">
+</head>
+<body>
+    <header>
+        <h1>Ringim Nerede?</h1>
+    </header>
+    <main>
+        <div class="container">
+        <form action="/kayitekleme" method="post">
+            <div class="input-container">
+                <input type="text" name="ad" placeholder="Ad:" required> <br>
+            </div>
+
+            <div class="input-container">
+                <input type="text" name="soyad" placeholder="Soyad:" required> <br>
+            </div>
+            <div class="input-container">
+                <input type="email" name="eposta" placeholder="Eposta: ogrencino@ogrenci.ege.edu.tr" required> <br>
+            </div>
+            <div class="input-container">
+                <input type="password" name="sifre" placeholder="Şifre: " required> <br>
+            </div>
+
+
+              <div class="input-container">
+                <input type="submit" value="Kayıt Ol">
+        </div>
+        </form>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>

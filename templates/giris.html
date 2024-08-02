@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap!</title>
+    <link rel="stylesheet" href="/static/giris.css">
+</head>
+<body>
+    <header>
+        <h1>Ringim Nerede?</h1>
+    </header>
+    <main>
+        <form action="/giris" method="post">
+            <div class="input-container epostavesifre">
+                <div class="input-container eposta">
+                    <input type="eposta" name="eposta" placeholder="Eposta: ogrencino@ogrenci.ege.edu.tr" required> <br>
+                </div>
+                <div class="input-container sifre">
+                    <input type="password" name="sifre" placeholder="Şifre:"> <br>
+                </div>
+             </div>
+                <input type="submit" value="Giriş Yap" class="giris" required>
+        </form>
+            <button type="submit" onclick="window.location.href='kayitsayfa';">Kayıt Ol</button> <br>
+
+        <p style="color: red">
+            {% if hata %}
+            "{{ hata }}"
+            {% endif %}
+        </p>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GPS Konumu</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="/static/anasayfa.css">
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ringim Nerede?</h1>
+    </header>
+    <main>
+        <h1>GPS Konumu</h1>
+        <div id="map"></div>
+        <script>
+            var map = L.map('map').setView([0, 0], 2);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var marker = L.marker([0, 0]).addTo(map);
+
+            function updateGPS() {
+                fetch('/gps-data')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.latitude && data.longitude) {
+                            var lat = data.latitude;
+                            var lon = data.longitude;
+                            map.setView([lat, lon], 13);
+                            marker.setLatLng([lat, lon]).update();
+                        } else {
+                            console.log('GPS verisi mevcut değil.');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            setInterval(updateGPS, 5000);  // Her 5 saniyede bir GPS verilerini güncelle
+        </script>
+    </main>
+    <footer>
+        <div class="icons">
+            <button class="icon-btn" onclick="window.location.href='duraklar'"><img src="/static/durak.png"></button>
+            <button class="icon-btn" onclick="window.location.href='anasayfa'"><img src="/static/kullanici.png"></button>
+            <button class="icon-btn" onclick="window.location.href='saatler'"><img src="/static/saat.png"></button>
+        </div>
+    </footer>
+</body>
+</html>
